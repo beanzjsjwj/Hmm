@@ -1,0 +1,123 @@
+---====== Define spawner ======---
+
+local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/Source.lua"))()
+
+---====== Create entity ======---
+
+local entity = Spawner.createEntity({
+
+    CustomName = "A-120",
+
+    Model = "rbxassetid/12535128554", -- Your entity's model url here ("rbxassetid/12535128554" or GitHub raw url)
+
+    Speed = 78,
+
+    MoveDelay = 2,
+
+    HeightOffset = 0,
+
+    CanKill = true,
+
+    KillRange = 50,
+
+    SpawnInFront = true,
+
+    ShatterLights = true,
+
+    FlickerLights = {
+
+        Enabled = true,
+
+        Duration = 1
+
+    },
+
+    Cycles = {
+
+        Min = 1,
+
+        Max = 4,
+
+        WaitTime = 2,
+
+    },
+
+    CamShake = {
+
+        Enabled = true,
+
+        Values = {1.1, 10, 0.1, 1},
+
+        Range = 100
+
+    },
+
+    ResistCrucifix = true,
+
+    BreakCrucifix = false,
+
+    DeathMessage = {"Oh... Hello.", "I'm surprised you found this place.", "It's pretty tedious just to get here, last time i checked.", "Anyways, what'd you die to?.", "Oh. The squiggly-face.", "It starts attacking after A-120.", "You can do this. I believe in you.", "I'll see you next time right?."},
+
+    IsCuriousLight = true
+
+})
+
+---====== Debug ======---
+
+entity.Debug.OnEntitySpawned = function()
+
+    print("Entity has spawned")
+
+end
+
+entity.Debug.OnEntityDespawned = function()
+
+    print("Entity has despawned")
+
+end
+
+entity.Debug.OnEntityStartMoving = function()
+
+    print("Entity started moving")
+
+end
+
+entity.Debug.OnEntityFinishedRebound = function()
+
+    print("Entity finished rebound")
+
+end
+
+entity.Debug.OnEntityEnteredRoom = function(room)
+
+    print("Entity entered room:", room)
+
+end
+
+entity.Debug.OnLookAtEntity = function()
+
+    print("Player looking at entity")
+
+end
+
+entity.Debug.OnDeath = function()
+
+    print("Player has died")
+
+end
+
+--[[
+
+    NOTE: By overwriting 'OnUseCrucifix', the default crucifixion will be ignored and this function will be called instead
+
+    entity.Debug.OnUseCrucifix = function()
+
+        print("Custom crucifixion script here")
+
+    end
+
+]]--
+
+---====== Run entity ======---
+
+Spawner.runEntity(entity)
