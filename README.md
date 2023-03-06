@@ -5,5 +5,4 @@ A-120 Works
 Idk
 Enjoy
 
-Works For Fluxus
-Hydrogen Idk
+Works For Fluxus | Hydrogen Idk
