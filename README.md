@@ -4,3 +4,6 @@ A60 Works
 A-120 Works
 Idk
 Enjoy
+
+Works For Fluxus
+Hydrogen Idk
