@@ -10,7 +10,7 @@ local entity = Spawner.createEntity({
 
     Model = "rbxassetid/12535128554", -- Your entity's model url here ("rbxassetid/12535128554" or GitHub raw url)
 
-    Speed = 78,
+    Speed = 68,
 
     MoveDelay = 2,
 
